@@ -1,6 +1,9 @@
 /* style.css */
 body {
     background-color: #111;
+    background-image: url(../images/pexels-dawn-lio-1140724-2177814.webp);
+    background-size: 100%;
+    background-position: center;
     color: #f1f1f1;
     font-family: 'Bebas Neue', sans-serif; /* Clean & bold font */  
     font-size: 18px;    
