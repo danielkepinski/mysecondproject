@@ -38,31 +38,31 @@ const questions = [
     {
         "question": "Which band released the album Toxicity in 2001, blending metal with alternative and Armenian folk influences?",
         "answers": ["System of a down", "Slipknot", "Korn", "Deftones"],
-        "correct": 1
+        "correct": 0
     },
     {
         "question": "Which British band is often credited with pioneering heavy metal in the early 1970s?",
-        "answers": ["Deep Purple", "Judas Priest", "Black Sabbath", "led Zeppelin"],
+        "answers": ["Deep Purple", "Judas Priest", "Black Sabbath", "Led Zeppelin"],
         "correct": 2
     },
     {
         "question": "In which band did Dave Mustaine play before founding Megadeth?",
-        "answer": ["Slayer", "Anthrax", "Metallica", "Exodus"],
+        "answers": ["Slayer", "Anthrax", "Metallica", "Exodus"],
         "correct": 2
     },
     {
         "question": "Which Swedish band is known for popularizing melodic death metal with albums like Slaughter of the Soul?",
-        "answer": ["Amon Amarth", "In Flames", "Opeth", "At The Gates"]
+        "answers": ["Amon Amarth", "In Flames", "Opeth", "At The Gates"],
         "correct": 3
     },
     {
         "question": "Which metal band famously wears masks and numbers themselves instead of using real names on stage?",
-        "answer": ["Slipknot", "Ghost", "Mushroomhead", "Gwar"],
+        "answers": ["Slipknot", "Ghost", "Mushroomhead", "Gwar"],
         "correct": 0
     },
     {
-        "Question": "Which subgenre combines metal with symphonic elements, operatic vocals, and orchestration, and is exemplified by bands like Nightwish and Epica?":
-        "answer": ["Gothic Metal", "Symphonic Metal", "Progressive Metal", "Avant-Garde Metal"],
+        "question": "Which subgenre combines metal with symphonic elements, operatic vocals, and orchestration, and is exemplified by bands like Nightwish and Epica?",
+        "answers": ["Gothic Metal", "Symphonic Metal", "Progressive Metal", "Avant-Garde Metal"],
         "correct": 1
     }
 ]
@@ -80,12 +80,6 @@ function loadAnswers() {
     answer1.innerText = questions[questionNumber].answers[1];
     answer2.innerText = questions[questionNumber].answers[2];
     answer3.innerText = questions[questionNumber].answers[3];
-    answer4.innerText = questions[questionNumber].answers[4];
-    answer5.innerText = questions[questionNumber].answers[5];
-    answer6.innerText = questions[questionNumber].answers[6];
-    answer7.innerText = questions[questionNumber].answers[7];
-    answer8.innerText = questions[questionNumber].answers[8];
-    answer9.innerText = questions[questionNumber].answers[9];
 }
 /**
  * This function checks if there is another question 
@@ -110,7 +104,7 @@ function quizHost() {
  */
 function checkAnswer(answerSelected) {
     console.log("hey you pressed: ", answerSelected);
-    correctAnswer = questions[questionNumber].correct;
+    let correctAnswer = questions[questionNumber].correct;
     // Check the inputted answer is the same as the correct answer
     if (answerSelected == correctAnswer) {
         // if so then increment the score
