@@ -87,6 +87,11 @@ function loadAnswers() {
     answer8.innerText = questions[questionNumber].answers[8];
     answer9.innerText = questions[questionNumber].answers[9];
 }
+/**
+ * This function checks if there is another question 
+ * and if not will give a message giving the user a score
+ * with a message
+ */
 function quizHost() {
     let quizLength = questions.length;
     if (questionNumber < quizLength) {
