@@ -105,6 +105,15 @@ function checkAnswer(answerSelected) {
         scoreAmount++;
         score.innerText = scoreAmount;
     }
+    //highlight for correct/incorrect answer
+    if (answerSelected == correctAnswer) {
+        scoreAmount++;
+        score.innerText = scoreAmount;
+        document.getElementById(`answer${answerSelected}`).classList.add('correct');
+      } else {
+        document.getElementById(`answer${answerSelected}`).classList.add('incorrect');
+      }
+      
     questionNumber++;
     quizHost();
 }

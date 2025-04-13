@@ -48,4 +48,15 @@ body {
     font-weight: bold;
     color: #4caf50;
   }
+  /* red and green highlight for correct or incorrect*/
+  button.correct {
+    background-color: #4caf50; /* Green for correct answer */
+    border-color: #388e3c;
+  }
+  
+  button.incorrect {
+    background-color: #f44336; /* Red for incorrect answer */
+    border-color: #d32f2f;
+  }
+
   
