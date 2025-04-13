@@ -31,7 +31,7 @@ const questions = [
     },
     {
         "question": "Which band released the album Toxicity in 2001, blending metal with alternative and Armenian folk influences?",
-        "answers": ["System of a down", "Slipknot", "Korn", "Deftones"],
+        "answers": ["System Of A Down", "Slipknot", "Korn", "Deftones"],
         "correct": 0
     },
     {
