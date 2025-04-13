@@ -86,7 +86,7 @@ function quizHost() {
         loadQuestion();
         loadAnswers();
     } else {
-        wrapper.innerHTML = `<h2>Its the end you got ${scoreAmount} right</h2>`
+        wrapper.innerHTML = `<h2>Its the end you got ${scoreAmount} right 🤘</h2>`
     }
 }
 /**
