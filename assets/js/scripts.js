@@ -83,12 +83,17 @@ function loadAnswers() {
 function quizHost() {
     let quizLength = questions.length;
     if (questionNumber < quizLength) {
-        loadQuestion();
-        loadAnswers();
+      loadQuestion();
+      loadAnswers();
     } else {
-        wrapper.innerHTML = `<h2>Its the end you got ${scoreAmount} right 🤘</h2>`
+      wrapper.innerHTML = `
+        <h2>Quiz Over!</h2>
+        <p>You got ${scoreAmount} out of ${questions.length} 🤘</p>
+      `;
+      document.getElementById("resetBtn").style.display = "block";
     }
-}
+  }
+  
 /**
  * This function checks the inputted answer with the 
  * actual answer. If corrrect it updates score on page.
@@ -124,3 +129,19 @@ function checkAnswer(answerSelected) {
   }
   
 quizHost();
+
+/**
+ * this function will add a reset button
+ * this will be for people trying to get a perfect score
+ */
+function resetQuiz() {
+    questionNumber = 0;
+    scoreAmount = 0;
+    score.innerText = scoreAmount;
+  
+    // Show the wrapper and hide the reset button
+    document.getElementById("resetBtn").style.display = "none";
+    wrapper.style.display = "block";
+  
+    quizHost();
+  }
