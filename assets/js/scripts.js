@@ -101,20 +101,26 @@ function checkAnswer(answerSelected) {
     let correctAnswer = questions[questionNumber].correct;
     // Check the inputted answer is the same as the correct answer
     if (answerSelected == correctAnswer) {
-        // if so then increment the score
-        scoreAmount++;
-        score.innerText = scoreAmount;
+      // if so then increment the score
+      scoreAmount++;
+      score.innerText = scoreAmount;
+      document.getElementById(`answer${answerSelected}`).classList.add('correct');
+    } else {
+      document.getElementById(`answer${answerSelected}`).classList.add('incorrect');
     }
-    //highlight for correct/incorrect answer
-    if (answerSelected == correctAnswer) {
-        scoreAmount++;
-        score.innerText = scoreAmount;
-        document.getElementById(`answer${answerSelected}`).classList.add('correct');
-      } else {
-        document.getElementById(`answer${answerSelected}`).classList.add('incorrect');
-      }
-      
-    questionNumber++;
-    quizHost();
-}
+  
+    // Delay for 1 second (1000ms) and then reset button styles
+    setTimeout(() => {
+      // Remove the 'correct' and 'incorrect' classes after delay
+      const buttons = [answer0, answer1, answer2, answer3];
+      buttons.forEach(button => {
+        button.classList.remove('correct', 'incorrect');
+      });
+  
+      // Move to the next question
+      questionNumber++;
+      quizHost();
+    }, 1000);  // 1000ms = 1 second delay
+  }
+  
 quizHost();
