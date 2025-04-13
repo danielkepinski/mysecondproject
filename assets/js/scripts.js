@@ -5,12 +5,6 @@ const answer0 = document.getElementById("answer0");
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
-const answer4 = document.getElementById("answer4");
-const answer5 = document.getElementById("answer5");
-const answer6 = document.getElementById("answer6");
-const answer7 = document.getElementById("answer7");
-const answer8 = document.getElementById("answer8");
-const answer9 = document.getElementById("answer9");
 
 
 const score = document.getElementById("score");
