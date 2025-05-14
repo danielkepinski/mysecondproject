@@ -135,13 +135,23 @@ quizHost();
  * this will be for people trying to get a perfect score
  */
 function resetQuiz() {
-    questionNumber = 0;
-    scoreAmount = 0;
-    score.innerText = scoreAmount;
-  
+    questionNumber = 0; // Reset question number
+    scoreAmount = 0; // Reset score
+    score.innerText = scoreAmount; // Update score display
+
+    // Reset the wrapper content to prepare for the first question
+    wrapper.innerHTML = `
+      <div id="question"></div>
+      <button id="answer0" onclick="checkAnswer(0)"></button>
+      <button id="answer1" onclick="checkAnswer(1)"></button>
+      <button id="answer2" onclick="checkAnswer(2)"></button>
+      <button id="answer3" onclick="checkAnswer(3)"></button>
+    `;
+
     // Show the wrapper and hide the reset button
     document.getElementById("resetBtn").style.display = "none";
     wrapper.style.display = "block";
-  
+
+    // Reload the first question and answers
     quizHost();
-  }
+}
