@@ -139,14 +139,12 @@ function resetQuiz() {
     scoreAmount = 0; // Reset score
     score.innerText = scoreAmount; // Update score display
 
-    // Reset the wrapper content to prepare for the first question
-    wrapper.innerHTML = `
-      <div id="question"></div>
-      <button id="answer0" onclick="checkAnswer(0)"></button>
-      <button id="answer1" onclick="checkAnswer(1)"></button>
-      <button id="answer2" onclick="checkAnswer(2)"></button>
-      <button id="answer3" onclick="checkAnswer(3)"></button>
-    `;
+    /**
+     * location reload will refresh the page
+     * and reset the quiz
+     * making sure the user has a clean slate
+     */
+    location.reload();
 
     // Show the wrapper and hide the reset button
     document.getElementById("resetBtn").style.display = "none";
