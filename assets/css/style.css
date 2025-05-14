@@ -2,7 +2,7 @@
 body {
     background-color: #111;
     background-image: url(../images/pexels-dawn-lio-1140724-2177814.webp);
-    background-size:cover;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
     color: #f1f1f1;
