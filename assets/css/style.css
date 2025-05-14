@@ -80,6 +80,8 @@ body {
 
   /* footer styling */
   .footer {
+  background-color: #333;
+  opacity: 70%;
   color: white;
   text-align: center;
   padding: 5px 0;
