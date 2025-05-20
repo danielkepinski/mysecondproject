@@ -1,3 +1,4 @@
+"use strict";
 //  getters
 const wrapper = document.getElementById("wrapper");
 const question = document.getElementById("question");
@@ -5,8 +6,6 @@ const answer0 = document.getElementById("answer0");
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
-
-
 const score = document.getElementById("score");
 const questions = [
     {
@@ -59,10 +58,12 @@ const questions = [
         "answers": ["Gothic Metal", "Symphonic Metal", "Progressive Metal", "Avant-Garde Metal"],
         "correct": 1
     }
-]
+];
 let questionNumber = 0;
 let scoreAmount = 0;
-// This loads the question
+/**
+ * This loads the question
+ */
 function loadQuestion() {
     question.innerText = questions[questionNumber].question;
 }
@@ -129,7 +130,6 @@ function checkAnswer(answerSelected) {
   }
   
 quizHost();
-
 /**
  * this function will add a reset button
  * this will be for people trying to get a perfect score
@@ -138,18 +138,15 @@ function resetQuiz() {
     questionNumber = 0; // Reset question number
     scoreAmount = 0; // Reset score
     score.innerText = scoreAmount; // Update score display
-
     /**
      * location reload will refresh the page
      * and reset the quiz
      * making sure the user has a clean slate
      */
     location.reload();
-
     // Show the wrapper and hide the reset button
     document.getElementById("resetBtn").style.display = "none";
     wrapper.style.display = "block";
-
     // Reload the first question and answers
     quizHost();
 }
