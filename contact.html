@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta tags for search engines-->
+    <meta name="description" content="music, quiz, music quiz, music trivia, fun quiz, music game, music knowledge, music challenge, music questions, music answers, music test, music competition">
+    <meta name="keywords" content="music, quiz, music quiz, music trivia, fun quiz, music game, music knowledge, music challenge, music questions, music answers, music test, music competition">
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">en
+    <title>Contact</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta tags for search engines-->
+    <meta name="description" content="music, quiz, music quiz, music trivia, fun quiz, music game, music knowledge, music challenge, music questions, music answers, music test, music competition">
+    <meta name="keywords" content="music, quiz, music quiz, music trivia, fun quiz, music game, music knowledge, music challenge, music questions, music answers, music test, music competition">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="containercontact">
+        <h1>Contact Me</h1>
+        <form id="contactForm" action="#" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    
+    <div id="thankYouPopup" class="modal">
+      <div class="modal-content">
+        <p>Thank you! Your email has been received.</p>
+        <button id="closeModal" class="close-btn">Close</button>
+      </div>
+    </div>
+
+    <script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('thankYouPopup').style.display = 'block';
+  this.reset();
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+  document.getElementById('thankYouPopup').style.display = 'none';
+});
+</script>
+</body>
+</html>
+    
+</body>
+</html>
