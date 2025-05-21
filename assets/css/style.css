@@ -92,6 +92,11 @@ body {
   height: auto;
 }
 
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
 .containercontact {
     max-width: 800px; /* Increase from 600px to 800px */
     width: 90%;       /* Responsive width */
