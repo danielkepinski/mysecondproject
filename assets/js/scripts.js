@@ -95,6 +95,12 @@ function quizHost() {
     }
   }
   
+function setButtonsDisabled(state) {
+    answer0.disabled = state;
+    answer1.disabled = state;
+    answer2.disabled = state;
+    answer3.disabled = state;
+}
 /**
  * This function checks the inputted answer with the 
  * actual answer. If corrrect it updates score on page.
@@ -105,6 +111,10 @@ function quizHost() {
 function checkAnswer(answerSelected) {
     console.log("hey you pressed: ", answerSelected);
     let correctAnswer = questions[questionNumber].correct;
+
+    // Disable all buttons to prevent multiple clicks
+    setButtonsDisabled(true);
+
     // Check the inputted answer is the same as the correct answer
     if (answerSelected == correctAnswer) {
       // if so then increment the score
@@ -114,7 +124,7 @@ function checkAnswer(answerSelected) {
     } else {
       document.getElementById(`answer${answerSelected}`).classList.add('incorrect');
     }
-  
+
     // Delay for 1 second (1000ms) and then reset button styles
     setTimeout(() => {
       // Remove the 'correct' and 'incorrect' classes after delay
@@ -122,10 +132,13 @@ function checkAnswer(answerSelected) {
       buttons.forEach(button => {
         button.classList.remove('correct', 'incorrect');
       });
-  
+
       // Move to the next question
       questionNumber++;
       quizHost();
+
+      // Re-enable buttons for the next question
+      setButtonsDisabled(false);
     }, 1000);  // 1000ms = 1 second delay
   }
   
