@@ -108,15 +108,7 @@ body {
     text-align: center;
 }
 
-/* Responsive footer for smaller screens */
-@media (max-width: 600px) {
-  .footer {
-    font-size: 8px; /* Smaller font size for smaller screens */
-    padding: 3px 0; /* Reduce padding for smaller screens */
-  }
-}
-
-/* Modal overlay */
+  /* Modal overlay */
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
@@ -169,3 +161,19 @@ body {
 .modal-content button.close-btn:hover {
   background-color: #388e3c;
 }
+
+/* Validation message styling for contact form */
+#formMessage {
+  color: #f44336;         
+  margin: 10px 0 0 0;     
+  font-size: 1em;
+  display: none;          /* Hidden by default, shown by js */
+  text-align: center;
+}
+
+/* Responsive footer for smaller screens */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 8px; /* Smaller font size for smaller screens */
+    padding: 3px 0; /* Reduce padding for smaller screens */
+  }

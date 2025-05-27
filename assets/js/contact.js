@@ -7,7 +7,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   const message = document.getElementById('message').value.trim();
   // Check for empty or whitespace-only inputs
   if (!name || !email || !message) {
-    alert("Please fill out all fields with valid input.");
+    formMessage.textContent = "Please fill out all fields with valid input.";
+    formMessage.style.display = "block";
     return;
   }
   // All good, show thank you popup
