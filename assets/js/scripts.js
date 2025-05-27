@@ -109,7 +109,6 @@ function setButtonsDisabled(state) {
  * @param {number} answerSelected 
  */
 function checkAnswer(answerSelected) {
-    console.log("hey you pressed: ", answerSelected);
     let correctAnswer = questions[questionNumber].correct;
 
     // Disable all buttons to prevent multiple clicks
