@@ -171,14 +171,7 @@ body {
   text-align: center;
 }
 
-/* Responsive footer for smaller screens */
-@media (max-width: 600px) {
-  .footer {
-    font-size: 8px; /* Smaller font size for smaller screens */
-    padding: 3px 0; /* Reduce padding for smaller screens */
-  }
-}
-
+/* styling for div contact me section */
 .contact {
   background-color: #333;
   opacity: 0.85;
@@ -187,9 +180,10 @@ body {
   padding: 8px 0;
   margin: 20px auto 0 auto;
   width: 100%;
-  font-size: 14px;
+  font-size: 25px;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .contact a {
@@ -201,3 +195,12 @@ body {
 .contact a:hover {
   text-decoration: underline;
 }
+
+/* Responsive footer for smaller screens */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 8px; /* Smaller font size for smaller screens */
+    padding: 3px 0; /* Reduce padding for smaller screens */
+  }
+}
+
